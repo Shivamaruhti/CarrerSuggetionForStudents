@@ -1,0 +1,134 @@
+.registration-card {
+  width: min(100%, 520px);
+  margin: 0 auto;
+  padding: 42px 48px;
+  background: #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 20px 65px rgba(28, 55, 90, 0.10);
+}
+
+.registration-card h1 {
+  margin-bottom: 8px;
+  color: #19344e;
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.registration-input {
+  min-height: 52px;
+  border: 1px solid #dce5ee;
+  border-radius: 10px;
+  background: #fbfcfe;
+  font-size: 13px;
+}
+
+.registration-input:focus {
+  border-color: #078b91;
+  box-shadow: 0 0 0 3px rgba(7, 139, 145, 0.10);
+}
+
+.registration-hint {
+  display: block;
+  margin-top: 6px;
+  color: #b42318;
+  font-size: 11px;
+}
+
+.registration-hint.is-valid {
+  color: #087f54;
+}
+
+.password-requirements {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px 12px;
+  margin: 10px 0 0;
+  padding: 0;
+  color: #8a9695;
+  font-size: 11px;
+  list-style: none;
+}
+
+.password-requirements li::before {
+  content: "○";
+  margin-right: 6px;
+  color: #a4afbd;
+}
+
+.password-requirements li.requirement-met {
+  color: #087f54;
+}
+
+.password-requirements li.requirement-met::before {
+  content: "✓";
+  color: #087f54;
+}
+
+.demo-otp {
+  margin: 2px 0 18px;
+  padding: 12px 14px;
+  border: 1px solid #b9dedb;
+  border-radius: 10px;
+  background: #effaf8;
+  color: #075e63;
+  font-size: 14px;
+}
+
+.demo-otp strong {
+  margin-left: 5px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.demo-otp span {
+  display: block;
+  margin-top: 4px;
+  color: #63778b;
+  font-size: 11px;
+}
+
+.registration-otp-row {
+  display: flex;
+  gap: 10px;
+}
+
+.registration-otp-row .register-button {
+  min-width: 100px;
+  padding: 0 16px;
+}
+
+.register-button:disabled,
+.login-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+}
+
+.registration-login {
+  margin: 20px 0 0;
+  color: #63778b;
+  font-size: 12px;
+  text-align: center;
+}
+
+.registration-login a {
+  color: #087f8c;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.registration-card .privacy-note {
+  margin-top: 14px;
+}
+
+@media (max-width: 576px) {
+  .registration-card {
+    padding: 32px 22px;
+    border-radius: 16px;
+  }
+
+  .registration-card h1 {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Career Suggestion Spring Boot",
+      "request": "launch",
+      "mainClass": "com.careersuggestion.App",
+      "projectName": "com.career"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-CareerSuggestionApplication<career-suggestion-api>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.careersuggestion.backend.CareerSuggestionApplication",
+      "projectName": "career-suggestion-api",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

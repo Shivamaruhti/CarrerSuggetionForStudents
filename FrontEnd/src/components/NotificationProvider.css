@@ -1,0 +1,141 @@
+.app-toast-region {
+  position: fixed;
+  z-index: 1100;
+  top: 24px;
+  right: 24px;
+  display: grid;
+  width: min(390px, calc(100vw - 32px));
+  gap: 12px;
+  pointer-events: none;
+}
+
+.app-toast {
+  --toast-color: #16835d;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  overflow: hidden;
+  padding: 17px 42px 18px 16px;
+  border: 1px solid #e8edf1;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 16px 42px rgba(23, 43, 77, 0.17);
+  color: #23384d;
+  pointer-events: auto;
+  animation: app-toast-in 260ms ease-out both;
+}
+
+.app-toast--success {
+  --toast-color: #16835d;
+}
+
+.app-toast--error {
+  --toast-color: #d44444;
+}
+
+.app-toast--warning {
+  --toast-color: #bd7a13;
+}
+
+.app-toast--info {
+  --toast-color: #087f8c;
+}
+
+.app-toast__icon {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  place-items: center;
+  border-radius: 11px;
+  background: color-mix(in srgb, var(--toast-color) 12%, white);
+  color: var(--toast-color);
+  font-size: 15px;
+}
+
+.app-toast__body {
+  min-width: 0;
+  padding-top: 1px;
+}
+
+.app-toast__title {
+  display: block;
+  margin-bottom: 4px;
+  color: #18334c;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.app-toast__message {
+  margin: 0;
+  color: #68798a;
+  font-size: 12px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.app-toast__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: grid;
+  width: 25px;
+  height: 25px;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: #8a98a6;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.app-toast__close:hover {
+  background: #f1f4f6;
+  color: #30475d;
+}
+
+.app-toast__progress {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  transform-origin: left;
+  background: var(--toast-color);
+  animation: app-toast-progress 5s linear forwards;
+}
+
+@keyframes app-toast-in {
+  from {
+    opacity: 0;
+    transform: translateX(18px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes app-toast-progress {
+  to {
+    transform: scaleX(0);
+  }
+}
+
+@media (max-width: 576px) {
+  .app-toast-region {
+    top: 12px;
+    right: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-toast,
+  .app-toast__progress {
+    animation-duration: 0.01ms;
+  }
+}

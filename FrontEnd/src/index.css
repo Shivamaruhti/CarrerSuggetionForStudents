@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary: #0f766e;
+  --accent: #e0b84f;
+  --accent-light: #f6e7b4;
+  --dark: #0b1f1e;
+  --bg: #f0f7f6;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: var(--bg);
+}
+
+/* Highlight the current page in the navbar */
+.navbar .nav-link {
+  border-radius: 999px;
+  padding: 8px 20px !important;
+  font-weight: 500;
+}
+
+.navbar .nav-link:hover {
+  background: var(--accent-light);
+}
+
+.navbar .nav-link.active {
+  background: var(--primary);
+  color: #fff;
+}

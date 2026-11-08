@@ -1,0 +1,28 @@
+.hero {
+  background: linear-gradient(135deg, #0f766e 0%, #14b8a6 60%, #e0b84f 140%);
+  padding: 80px 0 110px;
+}
+
+.hero-highlight {
+  color: var(--accent-light);
+}
+
+/* Pull the cards up so they overlap the hero */
+.cards-wrapper {
+  margin-top: -60px;
+}
+
+.card-image {
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-hover {
+  overflow: hidden;
+  border-radius: 16px;
+  transition: transform 0.3s;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+}

@@ -1,0 +1,5 @@
+# Created at 2026-10-27T16:02:28.542
+Boot Manifest-JAR contains absolute paths in classpath 'E:\Projects\Angular_React projects\CarrerSuggestionForStudents\BackEnd\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
